@@ -72,7 +72,8 @@ describe("effect", () => {
     expect(dummy).toBe(2);
     // stop 一个 runner 之后
     stop(runner);
-    obj.prop = 3;
+    // obj.prop = 3;
+    obj.prop++;
     // 依赖再次更新，当时传入的 effect 则不会重新执行
     expect(dummy).toBe(2);
     // runner 不受到影响
